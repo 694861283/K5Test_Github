@@ -1,0 +1,29 @@
+一、远程仓库与本地仓库的SSH连接
+
+1.添加SSH密钥（仅第一次连接需要）
+
+$cd ~/.ssh
+$ls
+//这两个用来查看C：/用户/.ssh/目录下是否有公钥id_rsa.pub和密钥
+
+$ ssh -T git@github.com
+//这个命令是用来测试ssh是否可用
+
+$ ssh-keygen -t rsa -C "your_email@youremail.com" 
+//这个命令是用来生成公钥密钥
+
+2-1.把已有的本地仓库与远程仓库关联
+
+$git remote add origin 远程仓库SSH地址 （仅第一次连接需要）
+//这个命令用来关联远程仓库地址
+
+$git push -u origin master (仅第一次连接需要）
+//这个命令用来推送所有本地仓库的文件以及改动注释等
+
+$git push  origin master (以后推送）
+
+2-2.把远程仓库克隆至本地仓库
+
+
+
+二、远程仓库与本地仓库的HTTPS连接

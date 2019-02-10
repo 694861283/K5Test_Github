@@ -1,0 +1,27 @@
+Quick setup — if you’ve done this kind of thing before
+HTTPS:  https://github.com/694861283/K5Test.git
+SSH：git@github.com:694861283/K5Test.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+1.
+…or create a new repository on the command line
+echo "# K5Test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/694861283/K5Test.git
+git push -u origin master
+
+2.
+…or push an existing repository from the command line
+git remote add origin https://github.com/694861283/K5Test.git
+git push -u origin master
+
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+一、在Github上创建一个线上空仓库，再拉取到本地仓库，再添加本地仓库的内容，再上传到线上空仓库
+
+二、在Github上创建一个空仓库，再上传本地仓库的内容

@@ -1,0 +1,66 @@
+一、Git的概述
+  1.Git、Svn、GitHub的区别
+    Git是一个代码分布式版本管理工具
+    Svn是一个代码集中式版本控制工具
+    GitHub是一个Git代码托管网站
+
+  2.GitGui、GitCmd、GitBash
+    GitGui是可视化图形界面
+    GitCmd包含了Dos命令 
+    GitBash基于Cmd的基础上增添一些新的功能和命令
+
+二、Git的配置
+  1.用户名和邮箱
+    初次安装git需要配置用户名和邮箱，否则git会提示：please tell me who you are.
+    $ git config --global user.name "694861283"
+    $ git config --global user.email "694861283@qq.com"
+
+    2.SSH
+    git支持https和git两种传输协议
+    使用ssh密钥，这样免去每次都输密码的麻烦
+      (1）清理原有密钥
+        $ ls 
+        $ mkdir key_backup
+        $ cp id_rsa* key_backup
+        $ rm id_rsa*
+
+    （2）创建本地密钥对
+      $ ssh-keygen -t rsa -C "your_email@youremail.com"  （密码可设也可不设置）
+
+      $ cd ~/.ssh （查看密钥对是否创建）
+      $ ls
+    （3）添加公钥到GitHub
+        $ cat ~/.ssh/id_rsa.pub （查看公钥内容）
+         Account Settings--->SSH Public keys ---> add another public keys
+    
+
+三、Git的使用
+  （1）远程创建下载
+    git clone HttpPath ProjectPath
+    example：
+    git clone https://github.com/694861283/Note.git /E/Fruit/code_google/linux-kernel-tmp
+    
+  （2）本地创建上传
+    echo "# Note" >> README.MD
+    git init
+    git add README.MD
+    git add .  %add all files%
+    git commit -m "CommitInstruction"
+    git remote add origin HttpPath
+    git push -u origin master
+
+  （3）本地更新上传
+    git remote add origin HttpPath
+    git push -u origin master （将代码上传到origin所对应的master分支）
+
+  （4）远程更新下载
+    git pull HttpPath
+
+
+四、Git的命令
+  1.remote
+    $ git remote -v  （查看当前的remote url）
+    $ git remote set-url origin git@github.com:Jasonfloy/wsb.git
+    $ git remote set-url origin https://github.com/Jasonfloy/wsb.git
+
+git status
